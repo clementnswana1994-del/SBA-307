@@ -1,38 +1,200 @@
-body{
-    border: 1px solid;
-    background-image: url("dayne-topkin.jpg");
-    display: block;
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    min-height: 100VH;
+    width: 100%;
+    background-image: url(./dayne-topkin.jpg);
+    background-position: center;
     background-size: cover;
-    height: 700px;
-    padding-top: 50px;
-    border-radius: 20px;
-
+    position: relative;
 }
-
-input{
-    display: block;
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
     align-items: center;
-    width: 300px;
-    margin-left: 500px;
-    margin-bottom: 20px;
-    padding: 10px;
-    border-radius: 1pc;
 }
-
-button{
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    font-size: 20px;
+    color: blue;
+    text-decoration: none;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(58, 168, 58);
     display: block;
-    padding: 10px;
-    margin-left: 500px;
-    margin-right: 100px;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 16px;
+    color: #fff;
+}
+.tech-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 16px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    margin-top: 60px;
+}
+.tech-btn:hover{
+    border: 1px solid #3ba32d;
+    background: #3ba32d;
+    transition: 1s;
+}
+nav .fa{
+    display: none;
+}
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+    display: inline-block;}
+    .nav-links{
+    position: absolute;
+    background: #3ba32d;
+    height: 100vh;
     width: 100px;
-    border-radius: 10pc;
+    top: 0;
+    right: 0;
+    text-align: left;
+    z-index: 2;}
 }
+    
 
+/*-------page2---------*/
+
+.page2{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
 h1{
-    font-style: italic;
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: black;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.mission{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.our-mission{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;   
+}
+.our-mission:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+@media(max-width: 700px){
+    .mission{
+        flex-direction: column;
+    }
 }
 
-select{
-    margin-left: 500px;
+/*----page3------*/
+
+.contact{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
 }
-   
+.info{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 80px;
+    position: relative;
+    overflow: hidden;
+}
+.info img{
+    width: 40%;
+    padding-right: 60%;
+    padding-top: 5%;
+}
+.info1{
+    margin-left: 600px;
+    margin-bottom: 100px;
+    font-size: 40px;
+    padding-bottom: 100px;
+}
+
+table{
+    width: 600px;
+    margin-bottom: 100px;
+    margin-top: 60px;
+    margin-left: 300px;
+    
+}
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td{
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #fff;
+}
+
+tr:nth-child(odd) {
+    background-color: #ddd;
+}
